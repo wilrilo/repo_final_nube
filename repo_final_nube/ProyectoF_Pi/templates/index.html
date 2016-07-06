@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Sistema para adquisicion de datos para el control y supervision de cultivos domesticos por protocolo IPV6</title>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+		<script src="{{ static_url('scripts/raspberry.js') }}" type="application/javascript"></script>
+
+</head>
+<body>
+	
+		<div>
+			<h1>Sistema para adquisicion de datos para el control y supervision de cultivos domesticos por protocolo IPV6</h1>
+			<p><span>Estado de la valvula: <span style="color: red;" id="estado">{{ estado }}</span></span></p>
+		</div>
+		
+		<hr />
+
+		<input type="hidden" id="session" value="{{ session }}" />
+
+		<div id="led-on">
+			<p><input type="submit" value="Encender la valvula" id="add-button" /></p>
+		</div>
+
+		<div id="led-off" style="display: none;">
+			<p><input type="submit" value="Apagar la valvula" id="remove-button" /></p>
+		</div>
+		<hr />
+		<div>
+			<h2>Medicion de variables</h2>
+<h3><span>Medidas de mi Sistema</span></h3>
+
+<table border="2px">
+<tr>
+<td><p><span>Temperatura</span></p></td>
+<td><p><span>Humedad</span></p>
+</td>
+</tr>
+
+<tr>
+<td><h2><iframe width="430" height="280" frameborder="0" src="https://app.ubidots.com/ubi/getchart/k_u4fOlasl9g0IsPvi6uHzqqgkg"></iframe></h2>
+</td>
+<td><h2><iframe width="430" height="280" frameborder="0" src="https://app.ubidots.com/ubi/getchart/uct647GdFRNHlosEX3_7LQ4Wx88"></iframe></h2>
+</td>
+</tr>
+</table>
+
+<h3><span>Medidas de los demas</span></h3>
+
+
+<table border="2px">
+<tr>
+<td><p><span>Temperatura</span></p></td>
+<td><p><span>Humedad</span></p>
+</td>
+</tr>
+
+<tr>
+<td><h2><<h2><iframe width="430" height="280" frameborder="0" src="https://app.ubidots.com/ubi/getchart/S862eWcAo1rArKC6IXQePIxw9fA"></iframe></h2>
+</td>
+<td><h2><iframe width="430" height="280" frameborder="0" src="https://app.ubidots.com/ubi/getchart/ltNyvhkOJGUaQtj_bMICPUKLI4E"></iframe></h2>
+</td>
+</tr>
+</table>
+</div>
+
+</body>
+</html>
